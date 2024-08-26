@@ -1,12 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { LandingPage } from '../src/pom/landing/landing-page';
+import {Department} from '../src/types/departments';
 
 
 
 const testData = [
-    {department : 'R&D', firstName : 'Johe', lastName : 'Doe', email : 'johe.doe@nasa.com', phone : '1234567890', cv : 'resource/tmp.pdf'},
-    {department : 'Australia', firstName : 'Celien', lastName : 'Dion', email : 'celien.dion@mtv.com', phone : '1122334455', cv : 'resource/tmp.pdf'},
-    {department : 'Product', firstName : 'Tim', lastName : 'Cook', email : 'tim.cook@apple.com', phone : '852369741', cv : 'resource/tmp.pdf'},
+    {department : Department.RnD, firstName : 'Johe', lastName : 'Doe', email : 'johe.doe@nasa.com', phone : '1234567890', cv : 'resource/tmp.pdf'},
+    {department : Department.AUSTRALIA, firstName : 'Celien', lastName : 'Dion', email : 'celien.dion@mtv.com', phone : '1122334455', cv : 'resource/tmp.pdf'},
+    {department : Department.PRODUCT, firstName : 'Tim', lastName : 'Cook', email : 'tim.cook@apple.com', phone : '852369741', cv : 'resource/tmp.pdf'},
 ];
 
 test.describe(`Connecteam test`, () => {

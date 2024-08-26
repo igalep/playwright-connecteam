@@ -2,6 +2,7 @@ import { Locator, Page } from "@playwright/test";
 import { BasePage } from "../base-page";
 import { FooterPage } from "../footer/footer-page";
 import { InnerCareerPage } from "./inner-career-page";
+import { Department } from "../../types/departments";
 
 
 export class CareerPage extends BasePage { 
@@ -17,7 +18,7 @@ export class CareerPage extends BasePage {
         this.careerList = page.locator('.section-careers__list');
     }
 
-    async clickOnSection(department : string) : Promise <InnerCareerPage>{
+    async clickOnSection(department : Department) : Promise <InnerCareerPage>{
 
         await this.careerList.locator(`a >> text="${department}"`).click();
         
